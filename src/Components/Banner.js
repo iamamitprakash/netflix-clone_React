@@ -24,11 +24,10 @@ function Banner() {
 
     return (
         <header
-            className="banner"
+            className={`banner ${window.innerWidth < 768 ? 'mobile' : ''}`}
             style={{
-                backgroundSize: "cover",
-                backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
-                backgroundPosition: "center center",
+            backgroundSize: "cover",
+            backgroundImage: `url("https://image.tmdb.org/t/p/original/${movie?.backdrop_path}")`,
             }}
         >
             <div className="banner__contents">
